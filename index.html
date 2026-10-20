@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102747">
+<meta name="description" content="Una felicitación especial para Amanda Ximena, llena de flores, fe y bendiciones.">
+<title>Feliz cumpleaños, Amanda Ximena 🌼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Great+Vibes&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#102747;--blue:#274c70;--gold:#e6b943;--cream:#fffaf0;--ink:#29394a;--leaf:#54734d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Nunito,sans-serif;overflow-x:hidden}
+header{position:relative;z-index:2;background:var(--navy);color:#fff;padding:15px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font:1.2rem "DM Serif Display",serif;display:flex;gap:12px;align-items:center}.brand span{font-size:1.8rem;color:var(--gold)}
+header small{font-style:italic;text-align:right}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 20px;position:relative;background:linear-gradient(rgba(255,250,240,.45),rgba(255,250,240,.6)),url("assets/portada.png") center/cover no-repeat}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse,rgba(255,252,243,.78),rgba(255,250,240,.1) 78%);pointer-events:none}
+.hero-content{position:relative;z-index:1;max-width:900px;animation:appear 1s ease both}
+.eyebrow{text-transform:uppercase;letter-spacing:.17em;font-size:.78rem;font-weight:800;color:var(--blue)}
+h1{font:400 clamp(2.7rem,7vw,5.6rem)/1.05 "DM Serif Display",serif;color:var(--navy);margin:18px 0}
+h1 span{display:block;font:clamp(2.8rem,8vw,6.1rem) "Great Vibes",cursive;color:#c4931c}
+.intro{max-width:690px;margin:20px auto;line-height:1.85;font-size:1.08rem}
+.verse{font:1.35rem/1.6 "DM Serif Display",serif;color:var(--navy);max-width:600px;margin:28px auto}
+.verse small{display:block;font:800 .8rem Nunito,sans-serif;letter-spacing:.15em;color:#a87a15;margin-top:8px}
+.btn{border:0;display:inline-block;text-decoration:none;border-radius:999px;background:var(--navy);color:white;padding:14px 24px;font:800 1rem Nunito,sans-serif;cursor:pointer;box-shadow:0 8px 22px #10274725;transition:.2s}
+.btn:hover{background:var(--blue);transform:translateY(-2px)}
+section.content{padding:75px 18px}
+.section-title{text-align:center;margin:0 auto 28px;max-width:700px}.flower{font-size:2rem;letter-spacing:.3em}
+h2{font:400 clamp(2.1rem,5vw,3.2rem) "DM Serif Display",serif;color:var(--navy);margin:12px 0}
+.section-title p{line-height:1.8}
+.letter-wrap{max-width:900px;margin:auto;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:22px;align-items:stretch}
+.envelope-panel{border-radius:24px;background:linear-gradient(145deg,#17385e,#0c203b);color:white;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;overflow:hidden;position:relative}
+.envelope-panel:before,.envelope-panel:after{content:"✿";position:absolute;color:#f1d77b;font-size:2rem;opacity:.75}.envelope-panel:before{top:18px;left:22px}.envelope-panel:after{bottom:18px;right:22px}
+.envelope{font-size:6rem;filter:drop-shadow(0 8px 8px #0003);animation:float 3s ease-in-out infinite;margin:12px 0}
+.envelope-panel p{line-height:1.7}
+.letter{background:#fff;border:1px solid #eddfb7;border-radius:24px;padding:clamp(22px,4vw,38px);box-shadow:0 15px 45px #10274710}
+.letter h3{font:2.3rem "Great Vibes",cursive;color:#b58922;text-align:center;margin:0 0 16px}
+.letter-body{line-height:1.9;white-space:pre-line}
+.letter-sign{font:2rem "Great Vibes",cursive;text-align:right;color:#b58922;margin-top:20px}
+.letter-hidden{display:none}.letter-hidden.open{display:block;animation:appear .6s ease both}
+.locked-note{text-align:center;line-height:1.8}.letter-controls{text-align:center;margin-top:22px}
+.extra-grid{max-width:950px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mini-card{background:#fff;border:1px solid #f0e4c6;border-radius:20px;padding:25px 18px;text-align:center;box-shadow:0 8px 24px #10274708}
+.mini-card .symbol{font-size:2.2rem}.mini-card h3{color:var(--navy);font:1.3rem "DM Serif Display",serif}.mini-card p{line-height:1.7;font-size:.96rem}
+.music-panel{max-width:760px;margin:28px auto 0;background:#fff;border:1px solid #ead9a7;border-radius:22px;padding:22px;text-align:center}
+.music-panel p{line-height:1.7}.music-panel audio{width:100%;margin-top:8px}
+footer{text-align:center;background:var(--navy);color:white;padding:34px 20px;line-height:1.9}footer strong{color:var(--gold);font-size:1.8rem}
+.petal{position:fixed;top:-35px;z-index:5;pointer-events:none;animation:fall linear forwards;opacity:.85}
+@keyframes appear{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(500deg);opacity:.1}}
+@media(max-width:720px){header small{display:none}.hero{min-height:82vh;padding:52px 17px}.letter-wrap{grid-template-columns:1fr}.envelope-panel{min-height:250px}.extra-grid{grid-template-columns:1fr}section.content{padding:52px 15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span>✝</span> Fe · Esperanza · Amor</div>
+  <small>Un detalle hecho con cariño y oración</small>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Hoy celebramos el regalo de tu vida</div>
+    <h1>¡Feliz cumpleaños!<span>Amanda Ximena</span></h1>
+    <p class="intro">A la joven adventista más linda: que Dios llene tu nuevo año de vida de paz, sonrisas, sueños bonitos y momentos que fortalezcan tu amistad con Jesús.</p>
+    <div class="verse">“Porque tú eres preciosa a mis ojos, y honorable, y yo te amo.”<small>ISAÍAS 43:4 · RVR1960, ADAPTADO AL FEMENINO</small></div>
+    <a class="btn" href="#carta">Descubre tu sorpresa 💌</a>
+  </div>
+</section>
+<section class="content" id="carta">
+  <div class="section-title"><div class="flower">🌼 🤍 🌼</div><h2>Una carta para ti, Amanda</h2><p>Hay palabras que merecen leerse despacito. Este pequeño rincón es para ti.</p></div>
+  <div class="letter-wrap">
+    <div class="envelope-panel"><div class="envelope" aria-hidden="true">💌</div><h3>Con cariño para ti</h3><p>Amanda Ximena, dentro de este sobre hay un mensaje especial. Cuando estés lista, abre tu carta.</p><button class="btn" id="openLetter" type="button">Abrir mi carta</button></div>
+    <article class="letter">
+      <div id="locked" class="locked-note"><div style="font-size:3rem">🌷</div><h2>Tu mensaje te espera</h2><p>Haz clic en “Abrir mi carta” para descubrir tus felicitaciones.</p></div>
+      <div id="letterBody" class="letter-hidden">
+        <h3>Querida Amanda Ximena,</h3>
+        <div class="letter-body">¡Feliz cumpleaños! 🤍🌼
+
+Hoy le doy gracias a Dios por el regalo de tu vida. Deseo que este nuevo año venga acompañado de muchas bendiciones, salud, paz y motivos sinceros para sonreír.
+
+Que Jesús continúe guiando cada uno de tus pasos, que te dé sabiduría para tus decisiones y fortaleza cuando las cosas no salgan como esperas. Que nunca olvides lo valiosa que eres para Dios y que siempre puedas encontrar descanso en sus promesas.
+
+Mi deseo es que sigas creciendo en fe, conservando la alegría de servir y permitiendo que la luz de Cristo se refleje en tu manera de tratar a los demás. Que cada nuevo día te acerque más a Él y te recuerde que tu vida tiene un propósito hermoso en sus manos.
+
+Disfruta mucho tu día, sonríe, celebra y guarda en tu corazón cada detalle bonito. ¡Que Dios te bendiga hoy y siempre!</div>
+        <div class="letter-sign">Con mucho cariño</div><div style="text-align:center;margin-top:20px;color:#b58922">✧ ✦ ✧</div>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="content" style="background:#fff7df">
+  <div class="section-title"><div class="flower">✨ 📖 ✨</div><h2>Tres deseos para tu nuevo año</h2><p>Que estas promesas te acompañen hoy y todos los días, Amanda.</p></div>
+  <div class="extra-grid">
+    <article class="mini-card"><div class="symbol">🕊️</div><h3>Paz en tu corazón</h3><p>“La paz os dejo, mi paz os doy.”<br><strong>Juan 14:27</strong></p></article>
+    <article class="mini-card"><div class="symbol">🌟</div><h3>Luz en tu camino</h3><p>“Lámpara es a mis pies tu palabra, y lumbrera a mi camino.”<br><strong>Salmo 119:105</strong></p></article>
+    <article class="mini-card"><div class="symbol">🌼</div><h3>Esperanza cada día</h3><p>“Esforzaos y cobrad ánimo; no temáis.”<br><strong>Deuteronomio 31:6</strong></p></article>
+  </div>
+  <div class="music-panel">
+    <h2>Un himno para acompañar este día 🎶</h2>
+    <p>Activa un himno instrumental de tu elección mientras lees la carta. Para mantener la página ligera y respetar los derechos de autor, agrega tu propio archivo de audio en la carpeta <code>assets</code> con el nombre <code>himno.mp3</code>.</p>
+    <audio controls preload="none">
+      <source src="assets/himno.mp3" type="audio/mpeg">
+      Tu navegador no puede reproducir audio.
+    </audio>
+    <small>Si todavía no agregas <code>assets/himno.mp3</code>, el reproductor no tendrá música disponible.</small>
+  </div>
+</section>
+</main>
+<footer><strong>✝</strong><div>Que Jesús siempre sea el centro de tu vida, Amanda.</div><small>Con mucho cariño y muchas bendiciones. 🌼🤍</small></footer>
+<script>
+const openButton=document.getElementById("openLetter"),locked=document.getElementById("locked"),letterBody=document.getElementById("letterBody");
+openButton.addEventListener("click",()=>{const opened=letterBody.classList.toggle("open");locked.style.display=opened?"none":"block";openButton.textContent=opened?"Cerrar carta":"Abrir mi carta";if(opened)document.getElementById("carta").scrollIntoView({behavior:"smooth",block:"start"});});
+if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){const flowers=["🌼","🤍","✿","❀"];function makePetal(){const p=document.createElement("span");p.className="petal";p.textContent=flowers[Math.floor(Math.random()*flowers.length)];p.style.left=Math.random()*100+"vw";p.style.fontSize=(14+Math.random()*14)+"px";p.style.setProperty("--drift",(Math.random()*150-75)+"px");p.style.animationDuration=(7+Math.random()*7)+"s";document.body.appendChild(p);setTimeout(()=>p.remove(),15000);}setInterval(makePetal,1100);}
+</script>
+</body>
+</html>

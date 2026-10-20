@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: cumple-amanda-ximena
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
